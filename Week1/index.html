@@ -1,0 +1,1484 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="/src/dist/reset.css">
+		<link rel="stylesheet" href="/src/dist/reveal.css">
+        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/src/dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css" id="highlight-theme">
+		<link rel="stylesheet" href="/src/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+                    <h1>First Class</h1>
+                </section>
+
+				<section>
+
+                    <section>
+                        <h2>Echo $(whoami)</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>№ Ball</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>№ Ball</h2>
+                        <p>Who knows exactly <span class="color-red">nothing</span> </p>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>Introduction</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="norm-container">
+                            <h2 class="title">Purpose of Class</h2>
+                            <div class="content">
+                                <ul>
+                                    <li>Basic of C & C++</li>
+                                    <li>Basic of Software Engineering</li>
+                                    <li>Little Black magic</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="norm-container">
+                            <h2 class="title">Pre knowladges</h2>
+                            <div class="content">
+                                <ul>
+                                    <li>Basic Programmings</li>
+                                    <ul>
+                                        <li>basic data structure</li>
+                                        <li>if & else</li>
+                                        <li>loops</li>
+                                    </ul>
+                                    <li>Basic Logics</li>
+                                    <ul>
+                                        <li>and operation</li>
+                                        <li>xor operation</li>
+                                        <li>or  operation</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                Evironment Checks
+                            </h2>
+                            <div class="content">
+                                <ul>
+                                    <li class="color-blue">VS Code</li>
+                                    <li>Bash</li>
+                                    <li>gcc / g++</li>
+                                </ul>
+                            </div>
+                            <div class="img">
+                                <img src="img/vscode.jpeg" alt="vscode image" height="200px" width="200px">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                Evironment Checks
+                            </h2>
+                            <div class="content">
+                                <ul>
+                                    <li>VS Code</li>
+                                    <li class="color-blue">Bash</li>
+                                    <li>gcc / g++</li>
+                                </ul>
+                            </div>
+                            <div class="img">
+                                <h4 data-id="code-title">Test</h4>
+                                <pre data-id="code-animation"><code class="language-sh hljs" data-trim >
+                                    ls -al
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                Evironment Checks
+                            </h2>
+                            <div class="content">
+                                <ul>
+                                    <li>VS Code</li>
+                                    <li>Bash</li>
+                                    <li class="color-blue">gcc / g++</li>
+                                </ul>
+                            </div>
+                            <div class="img">
+                                <h4 data-id="code-title">Test</h4>
+                                <pre data-id="code-animation"><code class="language-sh hljs" data-trim >
+                                    gcc -v
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+                    
+                    <section data-auto-animate>
+                        <h1>First Program</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 data-id="code-title">Hello, world <span class="color-red">/n</span> </h2>
+                        <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                            #include &lt;iostream&gt;
+                            using namespace std;
+    
+                            int main (void){
+                                cout << "Hello, world" << endl;
+                                return 0;
+                            }
+                        </code></pre>
+                        <h4>Execute</h4>
+                        <pre><code class="sh hljs" data-trim>
+                            gcc main.cpp
+                            ./a.out
+                        </code></pre>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                Namespace
+                            </h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="2">
+                                    #include &lt;iostream&gt;
+                                    using namespace std;
+            
+                                    int main (void){
+                                        cout << "Hello, world" << endl;
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        Problem
+                                        <ul>
+                                            <li class="fragment fade-up">Too many same builtins</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Solution
+                                        <ul>
+                                            <li class="fragment fade-up">Designate builtins</li>
+                                            <p>At this situation std <br> (standard library)</p>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footnotes">
+                                <p><span class="text-bold">*builtin: </span>Pre-written libraries </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                cout
+                            </h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="4">
+                                    #include &lt;iostream&gt;
+            
+                                    int main (void){
+                                        std::cout << "Hello, world" << std::endl;
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h4>cout builtin</h4>
+                                <ul>
+                                    <li>Print to terminal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">
+                                cout
+                            </h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
+                                <pre data-id="code-animation"><code class="cpp hljs" data-trim data-line-numbers="4">
+                                    #include &lt;iostream&gt;
+            
+                                    int main (void){
+                                        std::cout << "Hello, world" << std::endl;
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h4>Another Usage of namespace</h4>
+                                using
+                                <pre><code data-trim>
+                                    &lt;namespace&gt;::    
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+                    
+                    <section>
+                        <h1>Functions</h1>
+                    </section>
+
+                    <section>
+                        <h3>&lt;T&gt; functionName(&lt;T&gt; inputdatas, &lt;T&gt;...)</h3>
+                        <ul>
+                            <li>&lt;T&gt;
+                                <ul>
+                                    <li>output data type</li>
+                                </ul>
+                            </li>
+                            <li>functionName
+                                <ul>
+                                    <li>name of function</li>
+                                </ul>
+                            </li>
+                            <li>inputDatas
+                                <ul>
+                                    <li>input data type</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p><span class="text-bold">&lt;T&gt;: </span>Template -> Data Type</p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Quick Example</h2>
+                        <h3>Just like the Old sayings</h3>
+                        <blockquote>
+                            the greatest programs comes from <br> CTRL+C & CTRL+V
+                        </blockquote>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Quick Example</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    #include &lt;iostream&gt;
+                                    #include &lt;cstring&gt;
+
+                                    void sayHello(void){
+                                        cout << "Hello, world" << endl;
+                                    }
+
+                                    string createGreetMsg(string msg){
+                                        return msg.c_str() + "!\n";
+                                    }
+            
+                                    int main (void){
+                                        sayHello();
+                                        cout << createGreetMsg();
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Please Copy & Paste</h3>
+
+                                <h3 data-id="code-title">Execute</h3>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    g++ main.cpp
+                                    ./a.out
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Walk Through</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="12|13|4|5|14|9|15">
+                                    #include &lt;iostream&gt;
+                                    #include &lt;cstring&gt;
+
+                                    void sayHello(void){
+                                        cout << "Hello, world" << endl;
+                                    }
+
+                                    string createGreetMsg(string msg){
+                                        return msg.c_str() + "!\n";
+                                    }
+            
+                                    int main (void){
+                                        sayHello();
+                                        cout << createGreetMsg();
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li class="fragment fade-in-then-semi-out" data-fragment-index="0">Find <span class="color-red">Main</span> and execute</li>
+                                    <li class="fragment fade-in-then-semi-out" data-fragment-index="1">call <span class="color-green">sayHello()</span></li>
+                                    <li class="fragment fade-in-then-semi-out" data-fragment-index="2">call <span class="color-green">CreateGreetMsg()</span></li>
+                                    <li class="fragment fade-in-then-semi-out" data-fragment-index="3">call <span class="color-green">cout</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Let's put in some Software Engineering</h2>
+                    </section>
+
+                    <section>
+                        <h2>Interface</h2>
+                        <p>
+                            Can be concatinate to other
+                        </p>
+                        <p class="fragment">
+                            You often only <span class="fragment highlight-red">USE</span> it
+                        </p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Hands-on Practice</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Code</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    #inlcude &lt;iostream&gt;
+                                    #include &lt;cstring&gt;
+
+                                    int main (void){
+                                        getTime();
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Spec</h3>
+                                <ul>
+                                    <li>This is the main function I will use</li>
+                                    <li><a href="https://www.cplusplus.com/reference/">C++ Reference</a></li>
+                                    <li><a href="www.google.com.tw">Google</a></li>
+                                </ul>
+                            </div>
+                            <div class="footnotes">
+                                <p>Remember: <span class="text-bold">CTRL+C & CTRL+V</span> is always your best friend</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Break Time</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Break Time</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Code</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    #inlcude &lt;iostream&gt;
+                                    #include &lt;cstring&gt;
+
+                                    int main (void){
+                                        getTime();
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Spec</h3>
+                                <ul>
+                                    <li>This is the main function I will use</li>
+                                    <li><a href="https://www.cplusplus.com/reference/">C++ Reference</a></li>
+                                    <li><a href="www.google.com.tw">Google</a></li>
+                                    <li><a href="https://stackoverflow.com/">Stack overflow</a></li>
+                                </ul>
+                            </div>
+                            <div class="footnotes">
+                                <p>Remember: <span class="text-bold">CTRL+C & CTRL+V</span> is always your best friend</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Answer</h2>
+                            <div class="content">
+                                <img src="img/ans.png" alt="ans image">
+                            </div>
+                            <div class="img">
+                                <h4 data-id="code-title">Time</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="4-11">
+                                    #include &lt;stdio.h&gt;
+                                    #include &lt;time.h&gt;
+                                    
+                                    void getTime(void){
+                                      time_t rawtime;
+                                      struct tm * timeinfo;
+                                    
+                                      time ( &rawtime );
+                                      timeinfo = localtime ( &rawtime );
+                                      printf ( "The current date/time is: %s", asctime (timeinfo) );
+                                    }
+
+                                    int main (void){
+                                        getTime();
+                                        return 0;
+                                    }
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>answer</h2>
+                        <p>Well, It doesn't matter you solve it or not, at least you had <span class="color-red">Google</span> it and <span class="color-red">struggle</span> it!</p>
+                        <p>That's what a pro programmer should do</p>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-auto-animate>
+                        <h2>Data Types</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Data Types</h2>
+                        <table>
+                            <thread>
+                                <th>Data type</th>
+                                <th>Size (bytes)</th>
+                                <th>Range</th>
+                            </thread>
+                            <tbody>
+                                <tr>
+                                    <td>char</td>
+                                    <td>1</td>
+                                    <td>-128~127</td>
+                                </tr>
+                                <tr>
+                                    <td>int</td>
+                                    <td>4</td>
+                                    <td>-32768~32767</td>
+                                </tr>
+                                <tr>
+                                    <td>float</td>
+                                    <td>4</td>
+                                    <td>-3.4e-38 ~ 3.4e-38</td>
+                                </tr>
+                                <tr>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td>0~1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>char</h2>
+                        charactor
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">2 <sup>7</sup></div>
+                            <div class="dt-block-item">2 <sup>6</sup></div>
+                            <div class="dt-block-item">2 <sup>5</sup></div>
+                            <div class="dt-block-item">2 <sup>4</sup></div>
+                            <div class="dt-block-item">2 <sup>3</sup></div>
+                            <div class="dt-block-item">2 <sup>2</sup></div>
+                            <div class="dt-block-item">2 <sup>1</sup></div>
+                            <div class="dt-block-item">2 <sup>0</sup></div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>char</h2>
+                        Max = 2 <sup>8</sup> - 1 = 255
+                        <div class="dt-block">
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">2 <sup>7</sup></div>
+                            <div class="dt-block-item">2 <sup>6</sup></div>
+                            <div class="dt-block-item">2 <sup>5</sup></div>
+                            <div class="dt-block-item">2 <sup>4</sup></div>
+                            <div class="dt-block-item">2 <sup>3</sup></div>
+                            <div class="dt-block-item">2 <sup>2</sup></div>
+                            <div class="dt-block-item">2 <sup>1</sup></div>
+                            <div class="dt-block-item">2 <sup>0</sup></div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>So what?</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>So what?</h2>
+                        <img src="img/ascii-table.jpg" alt="ascii-table">
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>int</h2>
+                        Integer
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">+ / -</div>
+                            <div class="dt-block-item">2 <sup>30</sup></div>
+                            <div class="dt-block-item">2 <sup>29</sup></div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">2 <sup>3</sup></div>
+                            <div class="dt-block-item">2 <sup>2</sup></div>
+                            <div class="dt-block-item">2 <sup>1</sup></div>
+                            <div class="dt-block-item">2 <sup>0</sup></div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>int</h2>
+                        <p>Max = + 2 <sup>31</sup> - 1 = + 2147483647</p>
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">+ / -</div>
+                            <div class="dt-block-item">2 <sup>30</sup></div>
+                            <div class="dt-block-item">2 <sup>29</sup></div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">2 <sup>3</sup></div>
+                            <div class="dt-block-item">2 <sup>2</sup></div>
+                            <div class="dt-block-item">2 <sup>1</sup></div>
+                            <div class="dt-block-item">2 <sup>0</sup></div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>int</h2>
+                        <p>Min = - 2 <sup>31</sup> = - 2147483648</p>
+                       
+                        <div class="dt-block">
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">+ / -</div>
+                            <div class="dt-block-item">2 <sup>30</sup></div>
+                            <div class="dt-block-item">2 <sup>29</sup></div>
+                            <div class="dt-block-item-escape">...</div>
+                            <div class="dt-block-item">2 <sup>3</sup></div>
+                            <div class="dt-block-item">2 <sup>2</sup></div>
+                            <div class="dt-block-item">2 <sup>1</sup></div>
+                            <div class="dt-block-item">2 <sup>0</sup></div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>int</h2>
+                        <p>Wait WUT?</p>
+                        <p> + 2147483647 ~  - 2147483648 ????</p>
+
+                        <h3 class="fragment">Look it up Your self</h3>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-auto-animate>
+                        <h1>Basic Operator</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h1><span class="color-red">Basic</span> Operator</h1>
+                        <img src="img/C-Operators.jpg" alt="C operators">
+                    </section>
+
+                    <section>
+                        <div class="img-container">
+                            <h2 class="title">First of all</h2>
+                            <div class="img">
+                                <h4 data-id=" code-title">Python execute</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    python
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Python Time!!!</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Little Quiz</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Do U like this?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    #include &lt;iostream&gt;
+
+                                    using namespace std;
+
+                                    bool isCSmallest (int a, int b, int c){
+
+                                        if (a > c & b > c)
+                                        {
+                                            return true;
+                                        }
+
+                                        return false;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Oh, my <br> WTF is this</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Little Quiz</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">What's wrong?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="7">
+                                    #include &lt;iostream&gt;
+
+                                    using namespace std;
+
+                                    bool isCSmallest (int a, int b, int c){
+
+                                        if (a > c & b > c)
+                                        {
+                                            return true;
+                                        }
+
+                                        return false;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Let's take an Example</h3>
+                                <code><span>6 > 1</span><span> & 3 > 1</span></code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Little Quiz</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">What's wrong?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="7">
+                                    #include &lt;iostream&gt;
+
+                                    using namespace std;
+
+                                    bool isCSmallest (int a, int b, int c){
+
+                                        if (a > c & b > c)
+                                        {
+                                            return true;
+                                        }
+
+                                        return false;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Let's take an Example</h3>
+                                <code><span class="color-red">True</span><span> & 3 > 1</span></code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Little Quiz</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">What's wrong?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="7">
+                                    #include &lt;iostream&gt;
+
+                                    using namespace std;
+
+                                    bool isCSmallest (int a, int b, int c){
+
+                                        if (a > c & b > c)
+                                        {
+                                            return true;
+                                        }
+
+                                        return false;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Let's take an Example</h3>
+                                <code><span class="color-red">True</span><span> > 1</span></code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Little Quiz</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">What's wrong?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="7">
+                                    #include &lt;iostream&gt;
+
+                                    using namespace std;
+
+                                    bool isCSmallest (int a, int b, int c){
+
+                                        if (a > c & b > c)
+                                        {
+                                            return true;
+                                        }
+
+                                        return false;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Let's take an Example</h3>
+                                <code><span class="color-red">False</span></code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Quiz Time</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Sample input</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim data-line-numbers="7">
+                                    123
+                                </code></pre>
+                                <h4 data-id="code-title">Sample output</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim data-line-numbers="7">
+                                    1, 2, 3
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>How good is Your programming ability?</h3>
+                                <ul>
+                                    <li> <span class="text-bold">Spec</span>
+                                        <ul>
+                                            <li>Given an int</li>
+                                            <li>Print all the digits</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footnotes">
+                                <p class="color-red">Try not to google this time!</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Quiz Time</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Quiz Time</h2>
+                        <h2>Break Time</h2>
+                    </section>
+
+                    
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Break Time</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Sample input</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim data-line-numbers="7">
+                                    123
+                                </code></pre>
+                                <h4 data-id="code-title">Sample output</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim data-line-numbers="7">
+                                    1, 2, 3
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li> <span class="text-bold">Spec</span>
+                                        <ul>
+                                            <li>Given an int</li>
+                                            <li>Print all the digits</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footnotes">
+                                <p class="color-red">Try not to google this time!</p>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>Bit Operation</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Recall</h2>
+                        <h3>Data Types</h3>
+                        <table>
+                            <thread>
+                                <th>Data type</th>
+                                <th>Size (bytes)</th>
+                                <th>Range</th>
+                            </thread>
+                            <tbody>
+                                <tr>
+                                    <td>char</td>
+                                    <td>1</td>
+                                    <td>-128~127</td>
+                                </tr>
+                                <tr>
+                                    <td>int</td>
+                                    <td>4</td>
+                                    <td>-32768~32767</td>
+                                </tr>
+                                <tr>
+                                    <td>float</td>
+                                    <td>4</td>
+                                    <td>-3.4e-38 ~ 3.4e-38</td>
+                                </tr>
+                                <tr>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td>0~1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Wait Bool?</h2>
+                        <h3>Data Types</h3>
+                        <table>
+                            <thread>
+                                <th>Data type</th>
+                                <th>Size (bytes)</th>
+                                <th>Range</th>
+                            </thread>
+                            <tbody>
+                                <tr>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td>0~1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Wait Bool?</h2>
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                        </div>
+                        <p><span class="color-green">true</span>? <span class="color-red">false</span>?</p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Quick Demo</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Quick Demo</h2>
+                        <h2>And a little Reverse</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Yes Bool!</h2>
+                        <div class="dt-block">
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <div class="dt-block">
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                            <div class="dt-block-item">?</div>
+                        </div>
+                        <p><span class="color-red">false</span></p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Yes Bool!</h2>
+                        <h2>Bit Operation</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Bit Operation</h2>
+                        <div class="dt-block">
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <code>&</code>
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                        </div>
+                        <code>=</code>
+                        <div class="dt-block">
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-blue text-bold">0</div>
+                        </div>
+                        <p><span class="color-red">false</span></p>
+                        <p class="fragment">LSB (Last Significant Bit)</p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Bit Operation</h2>
+                        <h2>How About Int?</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>How About Int?</h2>
+                        <h2>Why Int?</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Why Int?</h2>
+                        <img src="img/network-data-frame.png" alt="network data frame">
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Why Int?</h2>
+                        <img src="img/tcpip-frame-header.gif" alt="tcp/ip frame header">
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Bit Operation</h2>
+                        <div class="dt-block">
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                        </div>
+                        <code>&</code>
+                        <div class="dt-block">
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">0</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">1</div>
+                            <div class="dt-block-item">0</div>
+                        </div>
+                        <code>=</code>
+                        <div class="dt-block">
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                            <div class="dt-block-item color-blue text-bold">1</div>
+                            <div class="dt-block-item color-blue text-bold">1</div>
+                            <div class="dt-block-item color-blue text-bold">0</div>
+                            <div class="dt-block-item color-red">0</div>
+                        </div>
+                        <p><span class="color-blue">Parse Datas</span></p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Bit Operation</h2>
+                        <h2>How about <code class="color-red">|</code> and <code class="color-red">^</code></h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Bit Operation</h2>
+                        <h3>Summary</h3>
+                        <table>
+                            <thread>
+                                <th>Operator</th>
+                                <th>Sign</th>
+                                <th>usage</th>
+                            </thread>
+                            <tbody>
+                                <tr>
+                                    <td>and</td>
+                                    <td>&</td>
+                                    <td>unset</td>
+                                </tr>
+                                <tr>
+                                    <td>or</td>
+                                    <td>|</td>
+                                    <td>set</td>
+                                </tr>
+                                <tr>
+                                    <td>xor</td>
+                                    <td>^</td>
+                                    <td>flip</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h2>Breef Proof</h2>
+                        <img src="img/proof-and.png" alt="proof of and">
+                        <img src="img/proof-or.png" alt="proof of or">
+                        <img src="img/proof-xor.png" alt="proof of xor">
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Shifts</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Shifts</h2>
+                        <h3 data-id="code-title">Let's just Play with python shall we?</h3>
+                        <pre data-id="code-animation"><code class="py hljs" data-trim data-line-numbers>
+                            bin(int("10101101", 2) >> 1)
+                            bin(int("10101101", 2) >> 2)
+                            bin(int("10101101", 2) << 1)
+                            bin(int("10101101", 2) << 2)
+                        </code></pre>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Shifts</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Sample Input</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    110
+                                </code></pre>
+                                <h4 data-id="code-title">Sample output</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    1101110
+                                    0x6e
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Big Challange <br> Use All U have</h3>
+                                <ul>
+                                    <li><span class="text-bold">Spec</span>
+                                        <ul>
+                                            <li>input an integer</li>
+                                            <li>output it's binary and heximal</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Shifts</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Sample Input</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    110
+                                </code></pre>
+                                <h4 data-id="code-title">Sample output</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim>
+                                    1101110
+                                    0x6e
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li><span class="text-bold">Spec</span>
+                                        <ul>
+                                            <li>input an integer</li>
+                                            <li>output it's binary and heximal</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h4 data-id="code-title">Verify with python</h4>
+                                <pre data-id="code-animation"><code class="py hljs" data-trim>
+                                    bin(xxx)
+                                    hex(xxx)
+                                </code></pre>
+                                
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+                
+                <section>
+                        
+                    <section>
+                        <h1>CRC-8</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>The Old sayings</h2>
+                        <iframe data-src="./src/Question.pdf" width="80%" height="500vh" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">The Old sayings</h2>
+                            <div class="img">
+                                <iframe data-src="./src/Question.pdf" width="80%" height="400vh" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                            </div>
+                            <div class="content">
+                                <h3>It's just a simple deviding</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section data-auto-animate>
+                        <h2>The Old sayings</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>The New sayings</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>CRC-8</h2>
+                        <h2>The New sayings</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>CRC-8</h2>
+                        <h3>Logics</h3>
+                        <h4>Simplify -> Only 8 bytes to check</h4>
+                        <ol>
+                            <li>Check if valid (needs to be devide)</li>
+                            <li>Left shift</li>
+                            <li>devide (xor)</li>
+                            <li>loop 1. for 8 times</li>
+                        </ol>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>CRC-8</h2>
+                        <h3>Hints</h3>
+                        <h4>Simplify -> Only 8 bytes to check</h4>
+                        <ol>
+                            <li>Check if valid (needs to be devide)
+                                <ul class="fragment">
+                                    <li>& 0x80 = 1</li>
+                                </ul>
+                            </li>
+                            <li>Left shift
+                                <ul class="fragment">
+                                    <li> << 1</li>
+                                </ul>
+                            </li>
+                            <li>devide (xor)
+                                <ul class="fragment">
+                                    <li> ^ 0x107</li>
+                                </ul>
+                            </li>
+                            <li>loop 1. for 8 times</li>
+                        </ol>
+                    </section>
+                                        
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Result</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Python Code?</h4>
+                                <pre data-id="code-animation"><code class="py hljs" data-trim data-line-numbers="1-9|2">
+
+                                    key = 0x107
+                                    crc = "11"
+                                    for _ in range(8):
+        
+                                        if crc & 0x80:
+                                            crc <<= 1;
+                                            crc ^= key;
+                                        else:
+                                            crc <<= 1;
+                                        
+                        
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Ok, You had finish your logics?</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Result</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Python Code</h4>
+                                <pre data-id="code-animation"><code class="py hljs" data-trim data-line-numbers="2-3">
+
+                                    key = 0x107
+                                    input = "11"
+                                    crc = int(input[1]) << 4 + int(input[0])
+                                    for _ in range(8):
+        
+                                        if crc & 0x80:
+                                            crc <<= 1;
+                                            crc ^= key;
+                                        else:
+                                            crc <<= 1;
+                                        
+                        
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Ok, You had finish your logics?</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Result</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">C Code</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    for(int i = 0; i < 8; i++){
+        
+                                        if(crc & 0x80){
+                                            crc <<= 1;
+                                            crc ^= key;
+                                        }else{
+                                            crc <<= 1;
+                                        }
+                        
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Ok, You had finish your logics</h3>
+                                <h3>Question is</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Result</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">C Code</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    for(int i = 0; i < 8; i++){
+        
+                                        if(crc & 0x80){
+                                            crc <<= 1;
+                                            crc ^= key;
+                                        }else{
+                                            crc <<= 1;
+                                        }
+                        
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Ok, You had finish your logics</h3>
+                                <h5>and functions</h5>
+                                <h3>Question is</h3>
+                                <h5 class="color-red">How to implement to your final C program</h5>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Further</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">C Code?</h4>
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
+                                    for(int i = 0; i < 8; i++){
+        
+                                        if(crc & 0x80){
+                                            crc <<= 1;
+                                            crc ^= key;
+                                        }else{
+                                            crc <<= 1;
+                                        }
+                        
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Ok, You had finish your logics</h3>
+                                <h3>How about not simplified?</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <section data-auto-animate>
+                        <h1>That's All for Today</h1>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h1>That's All for Today</h1>
+                        <h2>Thanks</h2>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Thanks</h2>
+                        <img src="img/final.png" alt="final image">
+                    </section>
+                    
+                </section>
+
+			</div>
+		</div>
+
+		<script src="/src/dist/reveal.js"></script>
+		<script src="/src/plugin/notes/notes.js"></script>
+		<script src="/src/plugin/markdown/markdown.js"></script>
+		<script src="/src/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
