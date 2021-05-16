@@ -312,20 +312,25 @@
                                 <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers>
                                     #include &lt;iostream&gt;
                                     #include &lt;cstring&gt;
-
+                                        
+                                    using namespace std;
+                                        
                                     void sayHello(void){
                                         cout << "Hello, world" << endl;
                                     }
-
+                                        
                                     string createGreetMsg(string msg){
-                                        return msg.c_str() + "!\n";
+                                        msg += "!\n";
+                                        return msg.c_str();
                                     }
-            
+                                        
                                     int main (void){
                                         sayHello();
-                                        cout << createGreetMsg();
+                                        cout << createGreetMsg("Hello, world");
                                         return 0;
                                     }
+
+
                                 </code></pre>
                             </div>
                             <div class="content">
@@ -345,21 +350,24 @@
                             <h2 class="title">Walk Through</h2>
                             <div class="img">
                                 <h4 data-id="code-title">Hello, world <span class="color-red">/n</span> </h4>
-                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="12|13|4|5|14|9|15">
+                                <pre data-id="code-animation"><code class="c hljs" data-trim data-line-numbers="|15|16|6|7|17|10|11|12|17">
                                     #include &lt;iostream&gt;
                                     #include &lt;cstring&gt;
-
+                                        
+                                    using namespace std;
+                                        
                                     void sayHello(void){
                                         cout << "Hello, world" << endl;
                                     }
-
+                                        
                                     string createGreetMsg(string msg){
-                                        return msg.c_str() + "!\n";
+                                        msg += "!\n";
+                                        return msg.c_str();
                                     }
-            
+                                        
                                     int main (void){
                                         sayHello();
-                                        cout << createGreetMsg();
+                                        cout << createGreetMsg("Hello, world");
                                         return 0;
                                     }
                                 </code></pre>
@@ -877,7 +885,6 @@
                         <h2>Quiz Time</h2>
                         <h2>Break Time</h2>
                     </section>
-
                     
                     <section data-auto-animate>
                         <div class="img-container">
@@ -904,6 +911,41 @@
                             </div>
                             <div class="footnotes">
                                 <p class="color-red">Try not to google this time!</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h3>Some More Software Engineering</h3>
+                    </section>
+                                        
+                    <section data-auto-animate>
+                        <div class="img-container">
+                            <h2 class="title">Software Engineering</h2>
+                            <div class="img">
+                                <h4 data-id="code-title">Your partner gives You</h4>
+                                <pre data-id="code-animation"><code class="sh hljs" data-trim data-line-numbers>
+                                    void getDigits(int a){
+                                        int ans[100000] = {0};
+
+                                        int i = 0;
+                                        do{
+                                            ans[i] = a%10;
+                                            i++;
+                                        }while(a /= 10);
+                                    
+                                        cout << ans[i-1];
+                                        for (int j = i-2; j >= 0; j--)
+                                        {
+                                            cout << ',' << ans[j];
+                                        }
+                                        cout << endl;
+                                    }
+                                </code></pre>
+                            </div>
+                            <div class="content">
+                                <h3>Some more Software Engineering</h3>
+                                <p>What should you do?</p>
                             </div>
                         </div>
                     </section>
